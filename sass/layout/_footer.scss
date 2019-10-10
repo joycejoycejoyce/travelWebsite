@@ -3,25 +3,54 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
-    &__logo-box {
-        text-align: center;
-        margin-bottom: 8rem;
-    }
-
     &__logo{
         width: 15rem;
         height: auto;
     }
 
-    &__navigation {
+    &__logo-box{
+        text-align: center;
+        -webkit-text-align: center;
+    }
 
+    &__navigation{
+        border-top: 1px solid $color-grey-dark-2; 
+        padding-top: 2rem;
+        display: inline-block;
     }
 
     &__list{
-
+        list-style: none;
     }
 
     &__item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
 
+    &__link{
+        &:visited,
+        &:link{
+            color: $color-grey-light-1;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        &:hover, 
+        &:active{
+            color: $color-primary;
+            box-shadow: 0 3px 3px rgba($color: $color-black, $alpha: .4) ;
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &__copyright{
+        color: $color-grey-light-1;
+        border-top: 1px solid $color-grey-dark-2; 
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
     }
 }
